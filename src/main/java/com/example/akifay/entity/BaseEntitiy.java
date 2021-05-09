@@ -1,7 +1,9 @@
 package com.example.akifay.entity;
 
 import com.sun.source.doctree.SerialDataTree;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.MappedSuperclass;

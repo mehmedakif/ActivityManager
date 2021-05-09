@@ -14,38 +14,39 @@ public class ActivityController
     private final ActivityService activityService;
 
     public ActivityController(ActivityService activityService){
+
         this.activityService = activityService;
     }
     @PostMapping("/create")
-    public ResponseEntity<ActivityDto> createUser(@RequestBody ActivityDto activityDto)
+    public ResponseEntity<ActivityDto> createActivity(@RequestBody ActivityDto activityDto)
     {
-        ActivityDto resultUser = activityService.createActivity(activityDto);
-        return ResponseEntity.ok(resultUser);
+        ActivityDto resultActivity = activityService.createActivity(activityDto);
+        return ResponseEntity.ok(resultActivity);
     }
 
     @GetMapping("/getAll")
     public ResponseEntity<List<ActivityDto>> getActivities()
     {
-        List<ActivityDto> resultUsers = activityService.getActivities();
-        return ResponseEntity.ok(resultUsers);
+        List<ActivityDto> resultActivity = activityService.getActivities();
+        return ResponseEntity.ok(resultActivity);
     }
 
     @GetMapping("/getById/{id}")
-    public ResponseEntity<ActivityDto> getUser(@PathVariable("id") Long id)
+    public ResponseEntity<ActivityDto> getActivity(@PathVariable Long id)
     {
-        ActivityDto resultUser = activityService.getActivity(id);
-        return ResponseEntity.ok(resultUser);
+        ActivityDto resultActivity = activityService.getActivity(id);
+        return ResponseEntity.ok(resultActivity);
     }
 
     @PutMapping("/edit/{id}")
-    public ResponseEntity<ActivityDto> updateUser(@PathVariable("id") Long id,@RequestBody ActivityDto activityDto)
+    public ResponseEntity<ActivityDto> updateActivity(@PathVariable Long id,@RequestBody ActivityDto activityDto)
     {
-        ActivityDto resultUser = activityService.updateActivity(id, activityDto);
-        return ResponseEntity.ok(resultUser);
+        ActivityDto resultActivity = activityService.updateActivity(id, activityDto);
+        return ResponseEntity.ok(resultActivity);
     }
 
     @DeleteMapping("/remove/{id}")
-    public ResponseEntity<Boolean> deleteUser(@PathVariable("id") Long id)
+    public ResponseEntity<Boolean> deleteActivity(@PathVariable Long id)
     {
         Boolean result = activityService.deleteActivity(id);
         return ResponseEntity.ok(result);

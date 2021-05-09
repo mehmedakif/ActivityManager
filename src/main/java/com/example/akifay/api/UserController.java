@@ -2,6 +2,7 @@ package com.example.akifay.api;
 
 import com.example.akifay.dto.UserDto;
 import com.example.akifay.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,11 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController
 {
+    @Autowired
     private final UserService userService;
 
-    public UserController(UserService userService){
-        this.userService = userService;
-    }
+    public UserController(UserService userService) {this.userService = userService;}
+
     @PostMapping("/create")
     public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto)
     {
@@ -28,22 +29,12 @@ public class UserController
         List<UserDto> resultUsers = userService.getUsers();
         return ResponseEntity.ok(resultUsers);
     }
-    @GetMapping("/getById/{id}")
-    public ResponseEntity<UserDto> getUser(@PathVariable("id") Long id)
+
+    @GetMapping("/getByMail/{mail}")
+    public ResponseEntity<UserDto> getUser(@PathVariable String mail)
     {
-        UserDto resultUser = userService.getUser(id);
+        UserDto resultUser = userService.getUser(mail);
         return ResponseEntity.ok(resultUser);
     }
-    @PutMapping("/edit/{id}")
-    public ResponseEntity<UserDto> updateUser(@PathVariable("id") Long id,@RequestBody UserDto userDto)
-    {
-        UserDto resultUser = userService.updateUser(id, userDto);
-        return ResponseEntity.ok(resultUser);
-    }
-    @DeleteMapping("/remove/{id}")
-    public ResponseEntity<Boolean> deleteUser(@PathVariable("id") Long id)
-    {
-        Boolean result = userService.deleteUser(id);
-        return ResponseEntity.ok(result);
-    }
+
 }

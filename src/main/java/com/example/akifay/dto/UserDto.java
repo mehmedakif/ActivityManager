@@ -1,14 +1,22 @@
 package com.example.akifay.dto;
 
-import lombok.Data;
+import com.example.akifay.entity.User;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 
+
+@Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserDto
 {
+    @Getter @Setter
     private String userFullName;
+    @Getter @Setter
     private Long userPhone;
-    private String userMail;
+    @Getter @Setter
+    private String mailAddress;
 }

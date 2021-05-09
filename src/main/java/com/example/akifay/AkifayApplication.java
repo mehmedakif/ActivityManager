@@ -1,13 +1,12 @@
 package com.example.akifay;
 
-import com.example.akifay.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import javax.sql.DataSource;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 @SpringBootApplication
+@EnableWebSecurity
 @ComponentScan(basePackages = {"com.example.akifay"})
 public class AkifayApplication {
 
@@ -15,6 +14,7 @@ public class AkifayApplication {
 		SpringApplication.run(AkifayApplication.class, args);
 
 	}
+
 
 
 }
