@@ -40,7 +40,7 @@ public class UserServiceImp implements UserService {
     @Override
     public UserDto getUser(String mailAddress)
     {
-        var user = userRepository.findByMailAddress(mailAddress);
+        User user = userRepository.findByMailAddress(mailAddress);
         return ObjectMapperUtils.map(user, UserDto.class);
     }
 
