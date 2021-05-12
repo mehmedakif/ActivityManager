@@ -1,6 +1,6 @@
 package com.example.akifay.repository;
 
-import com.example.akifay.entity.Activity;
+import com.example.akifay.model.Activity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

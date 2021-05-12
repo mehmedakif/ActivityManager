@@ -1,4 +1,4 @@
-package com.example.akifay.api;
+package com.example.akifay.controller;
 
 import com.example.akifay.dto.ActivityDto;
 import com.example.akifay.service.ActivityService;

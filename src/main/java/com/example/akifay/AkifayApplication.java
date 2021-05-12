@@ -2,11 +2,11 @@ package com.example.akifay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
-@EnableWebSecurity
 @ComponentScan(basePackages = {"com.example.akifay"})
 public class AkifayApplication {
 
@@ -14,7 +14,4 @@ public class AkifayApplication {
 		SpringApplication.run(AkifayApplication.class, args);
 
 	}
-
-
-
 }

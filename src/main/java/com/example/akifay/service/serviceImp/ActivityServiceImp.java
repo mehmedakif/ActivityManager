@@ -1,12 +1,10 @@
-package com.example.akifay.serviceImp;
+package com.example.akifay.service.serviceImp;
 
 import com.example.akifay.config.ObjectMapperUtils;
 import com.example.akifay.dto.ActivityDto;
-import com.example.akifay.dto.UserDto;
-import com.example.akifay.entity.Activity;
+import com.example.akifay.model.Activity;
 import com.example.akifay.repository.ActivityRepository;
 import com.example.akifay.service.ActivityService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,6 @@
 package com.example.akifay.dto;
 
-import com.example.akifay.entity.User;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Entity;
 
 
 @Builder

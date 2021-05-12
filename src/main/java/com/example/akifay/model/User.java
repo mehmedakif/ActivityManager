@@ -1,4 +1,4 @@
-package com.example.akifay.entity;
+package com.example.akifay.model;
 
 
 import lombok.*;
@@ -16,11 +16,11 @@ public class User extends BaseEntitiy
     @Getter @Setter
     @Column(name = "PHONE", length = 11, nullable = false, unique = true)
     @Id
-    private Long userPhone;
+    private Long phoneNumber;
 
     @Column(name = "NAME",length = 50,nullable = false)
     @Getter @Setter
-    private String userFullName;
+    private String fullName;
 
     @Column(name = "MAIL",length = 100)
     @Getter @Setter
@@ -28,6 +28,10 @@ public class User extends BaseEntitiy
 
     @Column(name = "PASSWORD")
     @Getter @Setter
-    private String userPassword;
+    private String password;
+
+    @Column(name = "ROLE")
+    @Getter @Setter
+    private String role;
 
 }

@@ -1,4 +1,4 @@
-package com.example.akifay.entity;
+package com.example.akifay.model;
 
 import lombok.*;
 

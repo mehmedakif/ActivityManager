@@ -1,9 +1,12 @@
-package com.example.akifay.api;
+package com.example.akifay.controller;
 
 import com.example.akifay.dto.UserDto;
+import com.example.akifay.model.User;
+import com.example.akifay.repository.UserRepository;
 import com.example.akifay.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,4 +40,11 @@ public class UserController
         return ResponseEntity.ok(resultUser);
     }
 
+    private UserRepository developerRepository;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @RequestMapping(value = "/sign-up", method = RequestMethod.POST)
+    public void signUp(@RequestBody User user) {
+        //TODO: Registration will be implemented.
+    }
 }
