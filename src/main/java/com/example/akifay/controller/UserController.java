@@ -33,10 +33,10 @@ public class UserController
         return ResponseEntity.ok(resultUsers);
     }
 
-    @GetMapping("/getByMail/{mail}")
-    public ResponseEntity<UserDto> getUser(@PathVariable String mail)
+    @GetMapping("/getByUsername/{username}")
+    public ResponseEntity<UserDto> getUser(@PathVariable String username)
     {
-        UserDto resultUser = userService.getUser(mail);
+        UserDto resultUser = userService.getUser(username);
         return ResponseEntity.ok(resultUser);
     }
 

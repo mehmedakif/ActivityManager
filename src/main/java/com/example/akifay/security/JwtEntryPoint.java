@@ -1,4 +1,4 @@
-package com.example.akifay.config;
+package com.example.akifay.security;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -17,8 +17,8 @@ public class JwtEntryPoint implements AuthenticationEntryPoint, Serializable {
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
-                         AuthenticationException authException) throws IOException {
-
+                         AuthenticationException authException) throws IOException
+    {
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     }
 }

@@ -24,7 +24,7 @@ public class User extends BaseEntitiy
 
     @Column(name = "MAIL",length = 100)
     @Getter @Setter
-    private String mailAddress;
+    private String username;
 
     @Column(name = "PASSWORD")
     @Getter @Setter

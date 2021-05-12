@@ -1,4 +1,4 @@
-package com.example.akifay.config;
+package com.example.akifay.security;
 
 import java.io.Serializable;
 import java.util.Date;

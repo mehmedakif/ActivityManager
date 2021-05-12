@@ -14,5 +14,7 @@ public class UserDto
     @Getter @Setter
     private Long userPhone;
     @Getter @Setter
-    private String mailAddress;
+    private String username;
+    @Getter @Setter
+    private String getPassword;
 }

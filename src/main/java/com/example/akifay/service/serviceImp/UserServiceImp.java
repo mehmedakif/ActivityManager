@@ -37,9 +37,9 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public UserDto getUser(String mailAddress)
+    public UserDto getUser(String username)
     {
-        User user = userRepository.findByMailAddress(mailAddress);
+        User user = userRepository.findByUsername(username);
         return ObjectMapperUtils.map(user, UserDto.class);
     }
 

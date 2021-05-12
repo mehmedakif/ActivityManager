@@ -1,4 +1,4 @@
-package com.example.akifay.model.jwt;
+package com.example.akifay.security.jwt;
 
 import java.io.Serializable;
 

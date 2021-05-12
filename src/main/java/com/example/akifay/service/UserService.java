@@ -8,7 +8,7 @@ public interface UserService
 {
     UserDto createUser(UserDto user);
     List<UserDto> getUsers();
-    UserDto getUser(String userMail);
+    UserDto getUser(String username);
     UserDto updateUser(Long id, UserDto user);
     Boolean deleteUser(Long id);
     String getPassword();

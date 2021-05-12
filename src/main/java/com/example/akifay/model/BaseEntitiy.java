@@ -13,8 +13,4 @@ import java.util.Date;
 public class BaseEntitiy implements Serializable
 {
     private Date createdDate;
-    private String createdBy;
-    private Date updatedDate;
-    private String updatedBy;
-
 }

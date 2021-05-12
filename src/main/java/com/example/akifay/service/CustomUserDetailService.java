@@ -17,20 +17,10 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userRepository.findByMailAddress(s);
+        User user = userRepository.findByUsername(s);
         if(user == null)
         {
             throw new UsernameNotFoundException("User not found in DB");
-        }
-        return new CustomUserDetails(user);
-    }
-
-    public UserDetails loadUserByMailAddress(String mail) throws UsernameNotFoundException
-    {
-        User user = userRepository.findByMailAddress(mail);
-        if(user == null)
-        {
-            throw new UsernameNotFoundException("Check mail address!");
         }
         return new CustomUserDetails(user);
     }
