@@ -1,4 +1,4 @@
-# AkifAy-TeinDemo
+# Activity Manager
 Java Spring backend of a siple activity management application.
 
 - Java
